@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>عالم الفراعنة — عالم مفتوح ثلاثي الأبعاد</title>
+<meta name="description" content="عالم مفتوح ضخم بيتولد وانت ماشي: جبال ومدن وكهوف ومخلوقات وطقس، ابني وقاتل — بهوية مصرية. مجاني في المتصفح.">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+</script>
+</head>
+<body>
+<div id="loading"><div class="load-inner"><div class="load-title">🏺 عالم الفراعنة</div><div class="load-bar"><div id="load-fill"></div></div><div id="load-text">بيتم توليد العالم...</div></div></div>
+
+<div id="menu" class="hidden">
+  <div class="menu-card">
+    <h1>🏺 عالم الفراعنة</h1>
+    <p class="tagline">عالم مفتوح بيتولد وانت ماشي: جبال، أهرامات، واحات، قرى، كهوف، مخلوقات، طقس ونهار وليل.<br>ابني، اقاتل، اكتشف — بهوية مصرية.</p>
+    <div class="menu-btns">
+      <button id="btn-continue" class="big-btn hidden">▶ متابعة المغامرة</button>
+      <button id="btn-start" class="big-btn">🌍 مغامرة جديدة</button>
+      <button id="btn-how" class="big-btn secondary">📜 طريقة اللعب</button>
+    </div>
+    <div id="how-panel" class="hidden">
+      <div class="how-col">
+        <h3>🖥️ كمبيوتر</h3>
+        <p>WASD أو الأسهم: حركة • ماوس: نظرة<br>مسافة: قفز • Shift: جري<br>كليك شمال: هجوم • B: وضع البناء<br>في البناء: كليك شمال يبني، كليك يمين يهدم<br>1-4: اختيار نوع الحجر • H: الرجوع للبيت</p>
+      </div>
+      <div class="how-col">
+        <h3>📱 موبايل</h3>
+        <p>عصا التحكم شمال: حركة • اسحب يمين الشاشة: نظرة<br>أزرار: قفز ⬆ • هجوم ⚔ • بناء 🧱 • هدم ✖<br>شريط الأحجار تحت: اضغط للاختيار</p>
+      </div>
+      <p class="how-goal">🎯 الهدف: اجمع دهب من المومياوات والكنوز، ابني قاعدتك، واكتشف الأهرامات والكهوف. الليل خطير!</p>
+    </div>
+    <p class="credits">مجاني بالكامل • يعمل في المتصفح • الحفظ تلقائي على جهازك</p>
+  </div>
+</div>
+
+<canvas id="game"></canvas>
+
+<div id="hud" class="hidden">
+  <div id="topbar">
+    <div id="hearts"></div>
+    <div id="stats"><span id="coins">🪙 0</span><span id="kills">💀 0</span><span id="clock">☀️</span><span id="weather-icon">🌤️</span></div>
+  </div>
+  <div id="crosshair">+</div>
+  <div id="toast" class="hidden"></div>
+  <div id="interact-tip" class="hidden"></div>
+  <div id="quest"></div>
+  <div id="compass" class="hidden">🧭 <span id="compass-txt"></span></div>
+  <div id="hotbar"></div>
+  <div id="fps">60</div>
+</div>
+
+<div id="touch-ui" class="hidden">
+  <div id="joystick"><div id="joy-knob"></div></div>
+  <div id="touch-btns">
+    <button class="tbtn" id="tb-jump">⬆</button>
+    <button class="tbtn" id="tb-attack">⚔</button>
+    <button class="tbtn" id="tb-build">🧱</button>
+    <button class="tbtn" id="tb-break">✖</button>
+  </div>
+</div>
+
+<div id="death-screen" class="hidden">
+  <div class="menu-card">
+    <h1>💀 مت في الصحراء</h1>
+    <p id="death-stats"></p>
+    <button id="btn-respawn" class="big-btn">⚰️ ابعث من جديد</button>
+  </div>
+</div>
+
+<div id="pause" class="hidden">
+  <div class="menu-card">
+    <h1>⏸ وقفة</h1>
+    <button id="btn-resume" class="big-btn">▶ كمّل</button>
+    <button id="btn-menu" class="big-btn secondary">🏠 القايمة الرئيسية</button>
+  </div>
+</div>
+
+<script type="module" src="game.js"></script>
+</body>
+</html>
