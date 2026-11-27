@@ -33,7 +33,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0b0e1a;font-family:
 #hearts{font-size:18px;letter-spacing:2px;text-shadow:0 1px 3px #000}
 #stats{display:flex;gap:14px;font-size:15px;font-weight:bold;text-shadow:0 1px 3px #000}
 #crosshair{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:22px;color:rgba(255,255,255,.85);text-shadow:0 0 4px #000}
-#toast{position:absolute;top:64px;left:50%;transform:translateX(-50%);background:rgba(20,16,8,.85);border:1px solid #c9a227;color:#ffd977;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:bold;white-space:nowrap}
+#toast{position:absolute;top:64px;left:50%;transform:translateX(-50%);background:rgba(20,16,8,.85);border:1px solid #c9a227;color:#ffd977;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:bold;white-space:normal;max-width:90vw;text-align:center;line-height:1.35;pointer-events:none}
 #interact-tip{position:absolute;bottom:120px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);padding:6px 14px;border-radius:14px;font-size:14px;color:#fff}
 #compass{position:absolute;top:44px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.5);border:1px solid rgba(255,217,119,.4);padding:4px 14px;border-radius:16px;font-size:13px;color:#ffe9a8;white-space:nowrap}
 #hotbar{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;pointer-events:auto}
